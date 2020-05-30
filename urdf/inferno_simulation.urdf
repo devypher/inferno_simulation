@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="inferno_simulation">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.245905009125424 -0.03206623754361 0.150956862661978"
+        rpy="0 0 0" />
+      <mass
+        value="0.418054450091855" />
+      <inertia
+        ixx="0.000841189437118679"
+        ixy="2.86114363402595E-20"
+        ixz="-2.47492439275866E-20"
+        iyy="0.00216214731804698"
+        iyz="2.31292934159627E-20"
+        izz="0.00143196218467312" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://inferno_simulation/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="255 0 0 255" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://inferno_simulation/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="base_link">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  <link
+    name="RF_wheel">
+    <inertial>
+      <origin
+        xyz="0 0 0.01"
+        rpy="0 0 0" />
+      <mass
+        value="0.073114" />
+      <inertia
+        ixx="2.4579E-05"
+        ixy="4.2352E-22"
+        ixz="9.5316E-22"
+        iyy="2.4579E-05"
+        iyz="1.6908E-22"
+        izz="4.4495E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://inferno_simulation/meshes/RF_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://inferno_simulation/meshes/RF_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RF_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.16645 -0.22837 -0.032762"
+      rpy="1.5708 0.28207 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RF_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="RB_wheel">
+    <inertial>
+      <origin
+        xyz="-5.5511E-17 -6.9389E-18 0.01"
+        rpy="0 0 0" />
+      <mass
+        value="0.073114" />
+      <inertia
+        ixx="2.4579E-05"
+        ixy="-1.4998E-40"
+        ixz="-8.8233E-24"
+        iyy="2.4579E-05"
+        iyz="-3.3694E-38"
+        izz="4.4495E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://inferno_simulation/meshes/RB_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://inferno_simulation/meshes/RB_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RB_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.3229 -0.22837 -0.032762"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RB_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="LF_wheel">
+    <inertial>
+      <origin
+        xyz="-3.4694E-18 5.5511E-17 0.01"
+        rpy="0 0 0" />
+      <mass
+        value="0.073114" />
+      <inertia
+        ixx="2.4579E-05"
+        ixy="-4.2352E-22"
+        ixz="4.6884E-22"
+        iyy="2.4579E-05"
+        iyz="-1.0642E-24"
+        izz="4.4495E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://inferno_simulation/meshes/LF_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://inferno_simulation/meshes/LF_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LF_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.16645 -0.054371 -0.032762"
+      rpy="1.5708 1.5064 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LF_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="LB_wheel">
+    <inertial>
+      <origin
+        xyz="5.5511E-17 0 0.01"
+        rpy="0 0 0" />
+      <mass
+        value="0.073114" />
+      <inertia
+        ixx="2.4579E-05"
+        ixy="-1.4998E-40"
+        ixz="2.7352E-22"
+        iyy="2.4579E-05"
+        iyz="-3.3694E-38"
+        izz="4.4495E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://inferno_simulation/meshes/LB_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://inferno_simulation/meshes/LB_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LB_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.3229 -0.058371 -0.032762"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LB_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="lidar">
+    <inertial>
+      <origin
+        xyz="-0.0074835 0.010668 9.1926E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.30369" />
+      <inertia
+        ixx="0.00014033"
+        ixy="3.6112E-05"
+        ixz="1.8302E-07"
+        iyy="0.0002506"
+        iyz="7.0553E-07"
+        izz="0.00021924" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://inferno_simulation/meshes/lidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://inferno_simulation/meshes/lidar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="lidar">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <joint
+    name="lidar_joint"
+    type="fixed">
+    <origin
+      xyz="-0.18876 -0.15318 0.011436"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <gazebo reference="LB_wheel">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="LF_wheel">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="RB_wheel">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="RF_wheel">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <link
+    name="imu">
+    <inertial>
+      <origin
+        xyz="0.012893 0.0010632 -0.010265"
+        rpy="0 0 0" />
+      <mass
+        value="0.00098313" />
+      <inertia
+        ixx="2.7278E-08"
+        ixy="-1.8314E-11"
+        ixz="-1.8646E-11"
+        iyy="7.4856E-08"
+        iyz="1.8158E-12"
+        izz="4.8045E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://inferno_simulation/meshes/imu.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 255 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://inferno_simulation/meshes/imu.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="imu">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+  <joint
+    name="imu_joint"
+    type="fixed">
+    <origin
+      xyz="-0.30404 -0.18549 -0.012738"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="imu" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="gps">
+    <inertial>
+      <origin
+        xyz="-8.076E-07 0.0059238 0.00034784"
+        rpy="0 0 0" />
+      <mass
+        value="0.0081626" />
+      <inertia
+        ixx="1.5669E-06"
+        ixy="2.8129E-11"
+        ixz="-1.4436E-12"
+        iyy="2.9513E-06"
+        iyz="5.5635E-09"
+        izz="1.4972E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://inferno_simulation/meshes/gps.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.79216 0.79216 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://inferno_simulation/meshes/gps.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="gps">
+    <material>Gazebo/Green</material>
+  </gazebo>
+  <joint
+    name="gps_joint"
+    type="fixed">
+    <origin
+      xyz="-0.31379 -0.127 0.031598"
+      rpy="1.5708 0 -1.4835" />
+    <parent
+      link="base_link" />
+    <child
+      link="gps" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
